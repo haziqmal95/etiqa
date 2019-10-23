@@ -1,0 +1,29 @@
+package demo;
+
+import java.util.Scanner;
+
+public class Etiqa {
+	public static void main(String[] args) {
+		int y;
+
+		System.out.print("Enter year: ");
+		y = year.nextInt();
+
+		if(y % 4 == 0) {
+			//Nested if else
+			if(y % 100 == 0) {
+				if(y % 400 == 0) {
+					System.out.print(y + " is a Leap Year");
+				} else {
+					System.out.print(y + " is not a Leap Year");
+				}
+			} else {
+				System.out.print(y + " is a Leap Year");
+			}
+		} else {
+			System.out.print(y + " is not a Leap Year");
+		}
+	}
+
+	public final static Scanner year = new Scanner(System.in);
+}
